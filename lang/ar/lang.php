@@ -313,4 +313,5 @@ return [
     'weight' =>'الوزن',
     'quantity' => 'الكمية / mr',
     'best_size' => 'افضل مقاس ',
+    'this_mail_will_receved_all_mails' => 'سيتم ارسال الايميلات لهذا البريد'
 ];

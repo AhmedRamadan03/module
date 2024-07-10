@@ -47,5 +47,6 @@
     <a href="#" class="btn btn-lg bg-main text-white btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
 
     @include('front.layouts.script')
+    @include('vendor.sweetalert.alert')
 </body>
 </html>

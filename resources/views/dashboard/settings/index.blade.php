@@ -259,7 +259,8 @@
                                     </div>
                                     <div class="col-md-6 pt-3">
                                         <div class="form-group">
-                                            {!! Form::label('email_1', __('lang.email') . ' 1', ['class' => 'form-label']) !!}
+                                            {!! Form::label('email_1', __('lang.email') . ' 1', ['class' => 'form-label']) !!}<small
+                                            class="badge bg-warning">({{ __('lang.this_mail_will_receved_all_mails') }})</small>
                                             {!! Form::email('email_1', old('email_1', optional($settings->where('key', 'email_1')->first())->value), [
                                                 'class' => 'form-control',
                                             ]) !!}

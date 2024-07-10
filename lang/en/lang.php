@@ -396,5 +396,6 @@ return [
     'culture_description_en' => 'Culture Description English',
     'Multi_Disciplinary' => 'Multi-Disciplinary',
     'team' => 'Team',
+    'this_mail_will_receved_all_mails' => 'Emails will be sent to this email.'
 
 ];

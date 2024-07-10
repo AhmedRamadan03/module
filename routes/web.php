@@ -19,6 +19,7 @@ Route::get('/', 'HomeController@index')->name('front.home');
 Route::get('/about', 'AboutController@index')->name('front.about');
 
 Route::get('/contact', 'ContactController@index')->name('front.contact');
+Route::post('/send-contact', 'ContactController@sendContact')->name('front.sendContact');
 
 Route::get('/projects', 'ProjectController@index')->name('front.project');
 Route::get('/projects/{id}', 'ProjectController@show')->name('front.project.show');

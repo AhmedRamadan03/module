@@ -100,39 +100,46 @@
                 </div>
             </div>
             <div class="row g-5">
+
                 <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
+                   @if (session()->has('success'))
+                       <div class="alert alert-success">
+                        {{ session('success') }}
+                       </div>
+                   @endif
                     <h1 class="display-6 mb-5">{{ isRtl() ? $metaBanner->title : $metaBanner->title_en }}</h1>
                     <p class="mb-4">
                         {{ isRtl() ? $metaBanner->description : $metaBanner->description_en }}
                     </p>
-                    <form>
+                    <form method="post" action="{{ route('front.sendContact') }}">
+                        @csrf
                         <div class="row g-3">
                             <div class="col-md-6">
                                 <div class="form-floating">
-                                    <input type="text" class="form-control" id="name" placeholder="Ahmed Ramadan ...">
+                                    <input type="text" name="name" required class="form-control" id="name" placeholder="Ahmed Ramadan ...">
                                     <label for="name">{{ __('lang.name') }}</label>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-floating">
-                                    <input type="email" class="form-control" id="email" placeholder="ex@gmail.com">
+                                    <input type="email" name="email" required class="form-control" id="email" placeholder="ex@gmail.com">
                                     <label for="email">{{ __('lang.email') }}</label>
                                 </div>
                             </div>
                             <div class="col-12">
                                 <div class="form-floating">
-                                    <input type="text" class="form-control" id="subject" placeholder="{{ __('lang.subject') }}">
+                                    <input type="text" name="subject" required class="form-control" id="subject" placeholder="{{ __('lang.subject') }}">
                                     <label for="subject">{{ __('lang.subject') }}</label>
                                 </div>
                             </div>
                             <div class="col-12">
                                 <div class="form-floating">
-                                    <textarea class="form-control" placeholder="{{ __('lang.enter_your_message') }}" id="message" style="height: 100px"></textarea>
+                                    <textarea name="message" required class="form-control" placeholder="{{ __('lang.enter_your_message') }}" id="message" style="height: 100px"></textarea>
                                     <label for="message">{{ __('lang.message') }}</label>
                                 </div>
                             </div>
                             <div class="col-12">
-                                <button class="btn btn--primary py-3 px-5" type="button" onclick="sendMessage()">{{ __('lang.send_message') }}</button>
+                                <button class="btn btn--primary py-3 px-5" type="submit" >{{ __('lang.send_message') }}</button>
                             </div>
                         </div>
                     </form>
