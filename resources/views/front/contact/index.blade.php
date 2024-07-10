@@ -87,13 +87,12 @@
             </div> --}}
             <div class="row g-5">
 
-                <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
-                   @if (session()->has('success'))
-                       <div class="alert alert-success">
-                        {{ session('success') }}
-                       </div>
-                   @endif
                 <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s" style="min-height: 450px;">
+                    @if (session()->has('success'))
+                        <div class="alert alert-success">
+                         {{ session('success') }}
+                        </div>
+                    @endif
                     <h1 class="display-6 mb-5">{{ isRtl() ? $metaBanner->title : $metaBanner->title_en }}</h1>
                     <p class="mb-4 text-dark">
                         {{ isRtl() ? $metaBanner->description : $metaBanner->description_en }}
