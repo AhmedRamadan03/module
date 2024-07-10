@@ -197,9 +197,9 @@ return [
     'number_of_choice' => ' Number of Choice',
     'add_row' => 'Add Row',
     'save_questions' => 'Save Questions',
-    'about_us' => 'About Us',
-    'features' => 'Features',
-    'feature' => 'Feature',
+    'about_us' => 'Studio',
+    'features' => 'Blogs',
+    'feature' => 'Blog',
     'manage_info_of_about_us' => 'Manage Info of About Us',
     'assignments' => '  Assignments',
     'assignment' =>'    Assignment',
@@ -396,6 +396,9 @@ return [
     'culture_description_en' => 'Culture Description English',
     'Multi_Disciplinary' => 'Multi-Disciplinary',
     'team' => 'Team',
-    'this_mail_will_receved_all_mails' => 'Emails will be sent to this email.'
+    'this_mail_will_receved_all_mails' => 'Emails will be sent to this email.',
+    'latest_news' => 'Latest News',
+    'service_desc' => 'Working on all project phases to ensure nurturing your ideas and needs to a compete, coherence project.',
+    'address_url' => 'Address URL',
 
 ];

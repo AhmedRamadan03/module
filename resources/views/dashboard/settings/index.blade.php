@@ -116,6 +116,16 @@
                                         </div>
 
                                     </div>
+                                    <div class="col-md-12 pt-3">
+                                        <div class="form-group">
+                                            {!! Form::label('address_url', __('lang.address_url'), ['class' => 'form-label']) !!}
+                                            {!! Form::text('address_url', old('address_url', optional($settings->where('key', 'address_url')->first())->value), [
+                                                'class' => 'form-control',
+
+                                            ]) !!}
+                                        </div>
+
+                                    </div>
 
                                 </div>
                             </div>
@@ -180,7 +190,7 @@
 
                                     </div>
 
-                                    <div class="col-md-4 pt-3">
+                                    {{-- <div class="col-md-4 pt-3">
                                         <div class="form-group">
                                             <label for="bg_footer">{{ __('lang.bg_footer') }}</label>
                                             <div style="width: 100%;border: 1px dashed #ccc; padding: 10px">
@@ -210,7 +220,7 @@
                                                 class=" form-control mt-3" name="company_profile">
                                         </div>
 
-                                    </div>
+                                    </div> --}}
 
 
                                 </div>
